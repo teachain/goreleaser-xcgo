@@ -11,7 +11,7 @@ Find it on docker hub https://hub.docker.com/r/mailchain/goreleaser-xcgo or run
 
 ```bash
 docker run --rm --privileged \
-  -v $PWD:/go/src/github.com/mailchain/mailchain \
+  -v $(pwd):/go/src/github.com/mailchain/mailchain \
   -v /var/run/docker.sock:/var/run/docker.sock \
   -w /go/src/github.com/mailchain/mailchain \
   mailchain/goreleaser-xcgo --snapshot --rm-dist
